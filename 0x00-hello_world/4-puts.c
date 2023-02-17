@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main(void)
 /**
- *Main - where the execution begins
- *If code returns 0, execution was successful*
+ * main - Entry point
+ *
+ * Return 0 - success
  */
 {
   puts("\"Programming is like building a multilingual puzzle");

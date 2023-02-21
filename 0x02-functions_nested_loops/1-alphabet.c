@@ -1,4 +1,4 @@
-#include <unistd>
+#include "main.h"
 /**
  * main - Entry point
  *
@@ -6,6 +6,5 @@
  */
 int main(void)
 {
-	write(1, "_putchar\n", 9);
-	return (0);
+	print_alphabet();
 }

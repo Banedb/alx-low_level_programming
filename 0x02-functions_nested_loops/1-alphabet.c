@@ -1,11 +1,10 @@
-#include "main.h"
 /**
- * main - Entry point
+ * print_alphabet - prints the alphabets in lower case
+ * takes no argument
  *
- *Return: 0 (Success)
+ * Returns no value
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
 }

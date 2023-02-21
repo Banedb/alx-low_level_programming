@@ -1,24 +1,5 @@
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
- * print_alphabet - prints the alphabets in lower case
- * takes no argument
- *
- * Returns no value
- */
+/* Prototype for print alphabet function */
 void print_alphabet(void)
-{
-	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
-}
+
+/* Prototype for _putchar function */
+int _putchar(char c)

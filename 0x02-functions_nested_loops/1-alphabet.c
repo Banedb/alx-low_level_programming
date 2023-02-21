@@ -1,3 +1,4 @@
+#include <unistd.h>
 /**
  * print_alphabet - prints the alphabets in lower case
  * takes no argument

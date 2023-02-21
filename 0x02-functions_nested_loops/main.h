@@ -1,0 +1,3 @@
+char putchar(char tt)
+{
+	

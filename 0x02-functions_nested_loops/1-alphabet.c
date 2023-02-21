@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 /**
  * print_alphabet - prints the alphabets in lower case
  * takes no argument
@@ -7,5 +7,10 @@
  */
 void print_alphabet(void)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
+	char alf = 'a';
+
+	while (alf <= 'z'){
+		_putchar(alf);
+		alf++;
+}
 }

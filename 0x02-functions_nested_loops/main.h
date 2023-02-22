@@ -17,12 +17,12 @@ int print_last_digit(int);
 /* Prototype for num8 */
 void jack_bauer(void);
 /* Prototype for num9 */
-void time_teble(void);
+void times_table(void);
 /* Prototype for num10 */
 int add(int, int);
 /* Prototype for num11 */
 void print_to_98(int n);
-/* Prototype for num2 */
+/* Prototype for num12 */
 void print_times_table(int n);
 /* Prototype for _putchar function */
 int _putchar(char c);

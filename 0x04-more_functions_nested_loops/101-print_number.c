@@ -5,19 +5,20 @@ int _putchar(char c);
 
 /**
  * print_number - Prints a number
-  *
+ * @n: integer param to function
+ *
  * No return
  */
 
 void print_number(int n)
 {
 	unsigned int n1 = 0;
+
 	if  (n < 0)
 	{
 		n1 = -n;
 		_putchar('-');
 	}
-
 	else
 	{
 		n1 = n;

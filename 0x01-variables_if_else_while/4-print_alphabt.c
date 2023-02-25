@@ -1,23 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 /**
- * main - Prints the alphabet without q and e.
+ * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
-int i;
+	char alf;
 
-for (i = 97; i < 123; i++)
-{
-if (i != 101 && i != 113)
-{
-putchar(i);
-}
-}
-putchar('\n');
-return (0);
+	for (alf = 'a'; alf < 'z' + 1; alf++)
+		if (alf != 'e' && alf != 'q')
+			putchar(alf);
+	putchar('\n');
+	return (0);
 }

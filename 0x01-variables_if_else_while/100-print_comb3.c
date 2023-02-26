@@ -1,37 +1,28 @@
 #include <stdio.h>
-
 /**
- * main - Prints numbers between 00 to 89.
+ * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
-int i, e;
+	int num1, num2;
 
-i = 48;
-e = 48;
-
-while (e < 58)
-{
-i = 48;
-while (i < 58)
-{
-if (e != i && e < i)
-{
-putchar(e);
-putchar(i);
-if (i == 57 && e == 56)
-{
-break;
-}
-putchar(',');
-putchar(' ');
-}
-i++;
-}
-e++;
-}
-putchar('\n');
-return (0);
+	for (num1 = 0; num1 <= 9; num1++)
+	{
+		for (num2 = 1; num2 <= 9; num2++)
+		{
+			if (num1 != num2 && num1 < num2)
+			{
+				putchar(num1 + '0');
+				putchar (num2 + '0');
+				if (num1 == 8 && num2 == 9)
+					break;
+				putchar(',');
+				putchar (' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }

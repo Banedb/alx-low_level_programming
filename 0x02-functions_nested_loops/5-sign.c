@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
- * print_sign - prints the sign of a number
- *@n: number being tested
+ * print_sign - prints sign of a number
+ * @n: integer to be checked
  *
- * Return: Always 0.
+ * Return: 0 (Success)
  */
 int print_sign(int n)
 {

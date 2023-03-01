@@ -5,11 +5,11 @@ void print_alphabet(void);
 /* Prototype for #2 */
 void print_alphabet_x10(void);
 /* Prototype for #3 */
-
+int _islower(int c);
 /* Prototype for #4 */
-
+int _isalpha(int c);
 /* Prototype for #5 */
-
+int print_sign(int n);
 /* Prototype for #6 */
 
 /* Prototype for #7 */

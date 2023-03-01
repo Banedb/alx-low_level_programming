@@ -3,7 +3,7 @@ int _putchar(char c);
 /* Prototype for #1 */
 void print_alphabet(void);
 /* Prototype for #2 */
-
+void print_alphabet_x10(void);
 /* Prototype for #3 */
 
 /* Prototype for #4 */

@@ -21,9 +21,9 @@ void times_table(void);
 /* Prototype for #10 */
 int add(int, int);
 /* Prototype for #11 */
-
-/* Prototype for #1 */
-
+void print_to_98(int n);
+/* Prototype for #12 */
+void print_times_table(int n);
 /* Prototype for #1 */
 
 /* Prototype for #1 */

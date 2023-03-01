@@ -19,7 +19,7 @@ void jack_bauer(void);
 /* Prototype for #9 */
 void times_table(void);
 /* Prototype for #10 */
-
+int add(int, int);
 /* Prototype for #11 */
 
 /* Prototype for #1 */

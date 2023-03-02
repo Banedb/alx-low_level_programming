@@ -1,23 +1,18 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ * main - prints the sum of all the multiples of 3 or 5 below 1024
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
-	int count = 1, n1 = 0, n2 = 1, n3 = 1;
+	int n, sum = 0;
 
-	while (count <= 50)
+	for (n = 0; n < 1024; n++)
 	{
-		if (count == 50)
-			printf("%d\n", n3);
-		else
-			printf("%d, ", n3);
-		n1 = n2;
-		n2 = n3;
-		n3 = n1 + n2;
-		count++;
+		if ((n % 3 == 0) || (n % 5 == 0))
+			sum += n;
 	}
+	printf("%d\n", sum);
+	return (0);
 }

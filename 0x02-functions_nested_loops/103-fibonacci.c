@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -6,19 +7,16 @@
  */
 int main(void)
 {
-	int i;
-	unsigned long int j = 1, k = 2, next, sum = 0;
+	int n1 = 0, n2 = 1, n3 = 1, sum = 0;
 
-	for (i = 1; i <= 33; ++i)
+	while (n3 <= 4000000)
 	{
-		if (j < 4000000 && (j % 2) == 0)
-		{
-			sum = sum + j;
-		}
-		next = j + k;
-		j = k;
-		k = next;
+		if (n3 % 2 == 0)
+			sum = sum + n3;
+		n1 = n2;
+		n2 = n3;
+		n3 = n1 + n2;
 	}
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }

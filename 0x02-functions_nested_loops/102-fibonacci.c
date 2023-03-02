@@ -6,21 +6,17 @@
  */
 int main(void)
 {
-	long int i, j = 1, k = 2, next;
-
-	for (i = 1; i <= 50; ++i)
-	{
-		if (j != 20365011074)
-		{
-			printf("%ld, ", j);
-		}
-		else
-		{
-			printf("%ld\n", j);
-		}
-		next = j + k;
-		j = k;
-		k = next;
-	}
+        int count = 1, n1 = 0, n2 = 1, n3 = 1;
+        while (count <= 50)
+        {
+                if (count == 50)
+                        printf("%d\n", n3);
+                else
+                        printf ("%d, ", n3);
+                n1 = n2;
+                n2 = n3;
+                n3 = n1 + n2;
+                count++;
+        }
 	return (0);
 }

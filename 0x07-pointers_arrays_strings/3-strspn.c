@@ -4,7 +4,7 @@
  * _strspn - gets the length of a prefix substring
  * @s: String where substring will look
  * @accept: Substring of accepted char
- *.
+ *
  * Return: Length of occurrence
  */
 unsigned int _strspn(char *s, char *accept)
@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 				c++;
 				break;
 			}
-			if (!(*--accept))
+		if (!(*--accept))
 				break;
 			accept = t;
 	}

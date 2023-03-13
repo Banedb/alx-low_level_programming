@@ -9,42 +9,18 @@
  */
 int main(void)
 {
-	int i, randomizer;
-	char numbers[] = "0123456789";
-	char letters[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTERS[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char signs[] = "~!@#$%^&*()_- +=[]{};':\"<>,.?/\\|";
-	char password[10];
+	int i, l;
+	char set[95];
+	char password[20];
 
 	srand(time(NULL));
-	randomizer = rand() % 4;
+	for (l = 0; l < 94; l++)
+		set[l] = (33 + l);
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 20; i++)
 	{
-		if (randomizer == 3)
-		{
-			password[i] = numbers[(rand() % 10)];
-			printf("%c", password[i]);
-			randomizer = rand() % 4;
-		}
-		else if (randomizer == 2)
-		{
-			password[i] = letters[(rand() % 26)];
-			printf("%c", password[i]);
-			randomizer = rand() % 4;
-		}
-		else if (randomizer == 1)
-		{
-			password[i] = LETTERS[(rand() % 28)];
-			printf("%c", password[i]);
-			randomizer = rand() % 4;
-		}
-		else
-		{
-			password[i] = signs[(rand() % 28)];
-			printf("%c", password[i]);
-			randomizer = rand() % 4;
-		}
+		password[i] = set[(rand() % 95)];
+		printf("%c", password[i]);
 	}
 	return (0);
 }

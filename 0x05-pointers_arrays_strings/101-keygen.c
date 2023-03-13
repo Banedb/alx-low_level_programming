@@ -1,38 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 
 /**
  * main - Entry point
  *
- * Return: 0
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	int ascii = 2772, i = 0, j, random;
-	char password[100];
-	time_t t;
+	int i, randomizer;
+	char numbers[] = "0123456789";
+	char letters[] = "abcdefghijklmnopqrstuvwxyz";
+	char LETTERS[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char signs[] = "~!@#$%^&*()_- +=[]{};':\"<>,.?/\\|";
+	char password[10];
 
-	srand((int) time(&t));
-	while (ascii > 126)
-	{
-		random = rand() % 126;
-		password[i] = random;
-		ascii -= random;
-		i++;
-	}
-	if (ascii > 0)
-		password[i] = ascii;
-	else
-	{
-		i--;
-	}
+	srand(time(NULL));
+	randomizer = rand() % 4;
 
-
-	for (j = 0; j <= i; j++)
+	for (i = 0; i < 10; i++)
 	{
-		printf("%c", password[j]);
+		if (randomizer == 3)
+		{
+			password[i] = numbers[(rand() % 10)];
+			printf("%c", password[i]);
+			randomizer = rand() % 4;
+		}
+		else if (randomizer == 2)
+		{
+			password[i] = letters[(rand() % 26)];
+			printf("%c", password[i]);
+			randomizer = rand() % 4;
+		}
+		else if (randomizer == 1)
+		{
+			password[i] = LETTERS[(rand() % 28)];
+			printf("%c", password[i]);
+			randomizer = rand() % 4;
+		}
+		else
+		{
+			password[i] = signs[(rand() % 28)];
+			printf("%c", password[i]);
+			randomizer = rand() % 4;
+		}
 	}
-	return (0);
 }

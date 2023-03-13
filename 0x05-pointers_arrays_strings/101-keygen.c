@@ -46,4 +46,5 @@ int main(void)
 			randomizer = rand() % 4;
 		}
 	}
+	return (0);
 }

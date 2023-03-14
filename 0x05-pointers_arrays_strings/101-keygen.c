@@ -1,26 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 /**
  * main - Entry point
  *
- * Return: 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
-	int i, l;
-	char set[256];
+	int ascii = 2772, i = 0, j, random;
 	char password[100];
+	time_t t;
 
-	srand(time(NULL));
-	for (l = 0; l < 256; l++)
-		set[l] = l;
-
-	for (i = 0; i < 100; i++)
+	srand((int) time(&t));
+	while (ascii > 126)
 	{
-		password[i] = set[(rand() % 255)];
-		printf("%c", password[i]);
+		random = rand() % 126;
+		password[i] = random;
+		ascii -= random;
+		i++;
+	}
+	if (ascii > 0)
+		password[i] = ascii;
+	else
+	{
+		i--;
+	}
+
+
+	for (j = 0; j <= i; j++)
+	{
+		printf("%c", password[j]);
 	}
 	return (0);
 }

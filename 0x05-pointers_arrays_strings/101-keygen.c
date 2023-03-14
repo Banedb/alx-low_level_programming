@@ -10,16 +10,16 @@
 int main(void)
 {
 	int i, l;
-	char set[95];
-	char password[20];
+	char set[256];
+	char password[100];
 
 	srand(time(NULL));
-	for (l = 0; l < 94; l++)
-		set[l] = (33 + l);
+	for (l = 0; l < 256; l++)
+		set[l] = l;
 
-	for (i = 0; i < 20; i++)
+	for (i = 0; i < 100; i++)
 	{
-		password[i] = set[(rand() % 95)];
+		password[i] = set[(rand() % 255)];
 		printf("%c", password[i]);
 	}
 	return (0);

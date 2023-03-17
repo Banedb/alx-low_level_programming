@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * main - multiply 2 numbers as arguments
+ * main - multiply 2 numbers
  * @argc: number of arguments
  * @argv: arguments
  *
@@ -23,12 +23,14 @@ int main(int argc, char *argv[])
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] > 57 || argv[i][j] < 48)
-			{  printf("Error\n");
-				exit(98); }
+			{
+				printf("Error\n");
+				exit(98);
+			}
 		}
 
 	}
-	mul = atol(argv[1]) *  atol(argv[2]);
+	mul = atol(argv[1]) * atol(argv[2]);
 	printf("%lu\n", mul);
 	return (0);
 }

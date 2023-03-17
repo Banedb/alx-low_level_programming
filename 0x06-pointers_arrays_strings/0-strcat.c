@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strcat - function that concatenates two strings.
- * @src: cadena a copiar
- * @dest: destino de la cadena.
+ * _strcat - function that concatenates two strings
+ * @dest: first argument
+ * @src: second argument to be added to first
+ *
  * Return: dest.
  */
 

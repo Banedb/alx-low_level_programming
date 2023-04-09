@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	fw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((x = read(fr, buf, BUFSIZ)) > 0)
+	while ((x = read(fr, buf, BUFSIZ)) => 0)
 	{
 		if (fw < 0 || write(fw, buf, x) != x)
 		{

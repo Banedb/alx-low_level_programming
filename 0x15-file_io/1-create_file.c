@@ -6,23 +6,27 @@
  *
  * Return: 1 (Success) || -1 (Failure)
  */
-int create_file(const char *filename, char *text_content)
-{
-	int file, n, x = 0;
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 
-	if (!filename)
-		return (-1);
-	file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (file < 0)
-		return (-1);
-	if (text_content)
-	{
-		while (text_content[n])
-			n++;
-		x = write(file, text_content, n);
-		if (x != n)
-			return (-1);
+int create_file(const char *filename, char *text_content) {
+	if (!filename) {
+		return -1;
 	}
-	close(file);
-	return (1);
+	int fd = open(filename, O_WRONLY|O_CREAT|O_TRUNC, 0600);
+	if (fd == -1) {
+		return -1;
+	}
+	if (text_content) {
+		int len = strlen(text_content);
+		int bytes_written = write(fd, text_content, len);
+		if (bytes_written != len) {
+			close(fd);
+			return -1;
+		}
+	}
+	close(fd);
+	return 1;
 }

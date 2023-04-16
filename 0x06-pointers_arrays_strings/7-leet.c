@@ -5,7 +5,7 @@
  *
  * Return: the encoded string
  */
-char *leet(char *s)
+char *leet(char *str)
 {
 	int i, j;
 	char num[] = {'4', '3', '0', '7', '1'};

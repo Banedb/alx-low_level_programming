@@ -8,16 +8,16 @@
  */
 char *rot13(char *str)
 {
-	int i;
+	int i, j;
+	char alf[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char rot[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
 	for (i = 0; str[i] != '\0'; i++)
-	{
-		if ((str[i] >= 'A' && str[i] <= 'M')
-		    || (str[i] >= 'a' && str[i] <= 'm'))
-			str[i] = str[i] + 13;
-		else if ((str[i] > 'M' && str[i] <= 'Z')
-			 || (str[i] >= 'm' && str[i] <= 'z'))
-			str[i] = str[i] - 13;
-	}
+		for (j = 0; j < 52; j++)
+			if (str[i] == alf[j])
+			{
+				str[i] = rot[j];
+				break;
+			}
 	return (str);
 }

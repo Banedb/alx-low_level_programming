@@ -7,7 +7,7 @@
  * @age: the dog's age
  * @owner: the dog's owner
  *
- * Return: NULL (Failure) || cutie_dog (Success)
+ * Return: NULL (Failure) || dogcraze (Success)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 

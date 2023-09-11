@@ -16,10 +16,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int i, j;
 	char *nc, *oc;
 
-	nc = malloc(sizeof(name));
+	nc = malloc(_strlen(name) + 1);
 	if (!nc)
 		return (NULL);
-	oc = malloc(sizeof(owner));
+	oc = malloc(_strlen(owner) + 1);
 	if (!oc)
 	{
 		free(nc);
@@ -36,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; name[i] != '\0'; i++)
 		nc[i] = name[i];
 	nc[i] = name[i];
-	for (j = 0; name[j] != '\0'; j++)
+	for (j = 0; owner[j] != '\0'; j++)
 		oc[j] = owner[j];
 	oc[j] = owner[j];
 
@@ -44,4 +44,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dogcraze->age = age;
 	dogcraze->owner = owner;
 	return (dogcraze);
+}
+
+/**
+ * _strlen - Returns the length of a string
+ * @s: String to count
+ *
+ * Return: String length
+ */
+int _strlen(char *s)
+{
+	int c = 0;
+
+	for (; *s != '\0'; s++)
+		c++;
+	return (c);
 }

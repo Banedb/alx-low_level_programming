@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Calculatest the perimeter of an island
+Calculates the perimeter of an island
 """
 
 

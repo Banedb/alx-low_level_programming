@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * delete_dnodeint_at_index - yes, does it.
+ * delete_dnodeint_at_index - deletes node at index
  * @head: pointer to linkedlist
  * @index: index
  *

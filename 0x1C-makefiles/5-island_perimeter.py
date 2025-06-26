@@ -8,7 +8,10 @@ def island_perimeter(grid):
     for row, lst in enumerate(grid):
         for col, num in enumerate(lst):
             if num == 1:
-                perimeter += 4 - ((grid[row - 1][col] * 2)
-                                  + (grid[row][col - 1] * 2))
+                perimeter += 4
+                if row and grid[row - 1][col]:
+                    perimeter -= 2
+                if col and grid[row][col - 1]:
+                    perimeter -= 2
 
     return perimeter

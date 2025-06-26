@@ -9,7 +9,7 @@ def island_perimeter(grid):
         for col, num in enumerate(lst):
             if num == 1:
                 perimeter += 4
-                if row and grid[row - 1][col] or col and grid[row][col - 1]:
+                if (row and grid[row - 1][col]) or col and grid[row][col - 1]:
                     perimeter -= 2
 
     return perimeter
